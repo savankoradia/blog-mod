@@ -4,6 +4,7 @@ var settingsData = {};
 var fs = require('fs');
 var controllers = require('./controllers');
 var templates = require('./templates');
+var _ = require('underscore');
 
 exports.set = function(routeObj, settings){
     routeObjects = routeObj;
@@ -23,6 +24,7 @@ exports.executeMethod = function(req, res){
                     if (routeData.view) {
                         templates.getTemplate(settingsData, routeData, function(renderFile){
                             responseObject.paths = settingsData.paths;
+                            responseObject._ = _;
                             res.render(renderFile, responseObject);
                         });
                     } else {

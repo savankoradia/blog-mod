@@ -19,7 +19,7 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.errorHandler());
-app.use(session({secret:'rtg8458hzs@#$22'})); //change secret
+app.use(session({secret:'rtg8458h789^%zs@#$22'})); //change secret
 GLOBAL.settings = settings;
 GLOBAL.rootDir = path.resolve(__dirname);
 

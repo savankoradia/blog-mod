@@ -3,5 +3,5 @@ exports.db = {
         port: 27017,
         username: "",
         password: "",
-        database: "mod0"
+        database: "mod0-blog"
 };
